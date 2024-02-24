@@ -27,10 +27,14 @@ export default function SignUp() {
         emailRedirectTo: `${location.origin}/api/auth/callback`,
       },
     });
+
+    //todo to samo co w page.tsx
     if (error) {
       setFormError(error.message);
     }
     if (!error) {
+      //todo dodałbym do enuma wszystkie enpointy, oraz raczej całego fetcha dał do osobnej funkcji i tu go tylko wywoływał, moze byc np hook w necie znajdziesz
+      // dodac trycatcha
       const res = await fetch(`${location.origin}/api/auth/users`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -60,6 +64,7 @@ export default function SignUp() {
           )}
         </div> */}
         {/* EMAIL */}
+        //todo to samo odnosnie inputów i enumów co w page.tsx
         <div className={styles.inputContainer}>
           <label>Email</label>
           <input type='email' {...register('user_email')} />

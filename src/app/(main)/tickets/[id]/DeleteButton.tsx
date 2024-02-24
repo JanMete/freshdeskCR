@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
+// todo dałbym raczej interface a nie inlineowo to typował
 export default function DeleteButton({ id }: { id: number }) {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();

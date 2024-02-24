@@ -9,6 +9,7 @@ type TicketDetailsProps = {
   };
 };
 
+//todo powyciągaj to - generateMetadata i getTicket do plików, Tickets razej enum bo reużywasz go, nie znam nexta ale zobacz czy musisz wołąć zawsze createServerComponentClient
 export async function generateMetadata({ params }: TicketDetailsProps) {
   const supabase = createServerComponentClient<Database>({ cookies });
   const { data: ticket } = await supabase
@@ -65,6 +66,7 @@ export default async function TicketDetails({ params }: TicketDetailsProps) {
           <div
             className={`min-w-9 min-h-9 flex justify-center items-center rounded-lg opacity-50 bg-yellow-200`}
           >
+            //todo takie rzeczy rób raczej wyżej, render i tak jest już dość nieczytelny przez ilość klas, tu dawaj raczej "przetworzone" stringi juz
             {ticket.user_email!.slice(0, 1).toUpperCase()}
           </div>
           <h3>{ticket.user_email}</h3>
