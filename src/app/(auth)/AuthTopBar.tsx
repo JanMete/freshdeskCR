@@ -9,6 +9,7 @@ export default function AuthTopBar() {
   return (
     <header className='p-10 bg-white'>
       <nav className='flex gap-11'>
+        //todo scieżki np /login imo do enuma
         <Link
           className={pathname === '/login' ? 'underline' : ''}
           href={'/login'}

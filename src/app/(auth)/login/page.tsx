@@ -25,6 +25,11 @@ export default function LogIn() {
       email: data.user_email,
       password: data.password,
     });
+
+    // todo dziwny ten if else :D tu masz 2 możliwosci tylko, zrób
+    //  if (error) {setFormError(error.message); return;}
+    // router.push('/');
+
     if (error) {
       setFormError(error.message);
     }
@@ -41,12 +46,15 @@ export default function LogIn() {
         {/* EMAIL */}
         <div className={styles.inputContainer}>
           <label>Email</label>
+
+          //todo daj do enuma wszytkie name pól - jakbys chcial reuzywać kiedyś
           <input type='email' {...register('user_email')} />
           {errors.user_email && (
             <p className='text-red-500 text-sm'>{`${errors.user_email.message}`}</p>
           )}
         </div>
         {/* PASSWORD */}
+        // mozesz pokmninic zamnkac inputa w osobny komponent, style, error message i w przyszłości jakiś zmiany bedziesz miec w jednym miejscu. zapytasz po co, no to tu sa 2 inputy tylko, a jak bedzie ich 50 to co wtedy;)?
         <div className={styles.inputContainer}>
           <label>Password</label>
           <input type='password' {...register('password')}></input>

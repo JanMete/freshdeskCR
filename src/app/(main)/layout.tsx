@@ -1,6 +1,6 @@
 import Navbar from '../components/Layout/Navbar/Navbar';
 import TopBar from '../components/Layout/TopBar/TopBar';
-
+//todo tu mozesz sprówac sobie typowanie z PropsWithChildren
 export default function RootLayout({
   children,
 }: Readonly<{

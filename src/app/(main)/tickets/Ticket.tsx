@@ -1,11 +1,13 @@
 import React from 'react';
 import { colorMapping } from '@/app/lib/utils';
 import Link from 'next/link';
-
+//todo literówki - doinstaluj dictionary sobie do ide
 type Tticket = {
   ticket: ticket;
 };
 
+
+//todo uwagi z poprzednich plików tu zastosuj
 export default function Ticket({ ticket }: Tticket) {
   return (
     <div

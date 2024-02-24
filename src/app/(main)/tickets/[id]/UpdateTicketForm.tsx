@@ -56,6 +56,7 @@ export default function UpdateTicketForm({
       <div className={styles.selectContainer}>
         <label>Status</label>
         <select
+            //todo po co tu asercja?
           defaultValue={ticket.status ?? ('' as string)}
           {...register('status')}
           onChange={handleSelectChange}
@@ -88,6 +89,7 @@ export default function UpdateTicketForm({
           {...register('agent')}
           onChange={handleSelectChange}
         >
+          //todo daj do metody wyzej np rednerUsers() i tu samo wywolanie, czysciej bedzie i obsłuż nulla bo oszukiwanie ts na dłuższą metę Ci nic nie da - lepiej pisac bez wtedy
           {users.map((user) => {
             return (
               <option key={user} value={user as string}>

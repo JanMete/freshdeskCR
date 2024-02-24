@@ -1,5 +1,8 @@
 import { z } from 'zod';
+//todo podziel całość na osobne pliki
 
+
+//todo nazwa newTicketSchema brzmiałaby lepiej
 export const createTicketSchema = z.object({
   title: z.string().min(3, 'Subject must be at least 3 characters long.'),
   priority: z.string(),
